@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Annapurna - Tiffin Delivery Service
 
 Annapurna is a modern web application designed for managing and tracking home-cooked meal (tiffin) subscriptions. It provides a seamless experience for both customers and administrators to handle daily food deliveries.
@@ -98,3 +99,7 @@ This will compile the TypeScript definitions and bundle the application into sta
 3. **Purchasing & Firestore:** The user selects a tiffin plan, opening the checkout modal. Upon successful checkout, a new Document is created in the `subscriptions` Firestore collection natively mapping to the user's Unique ID (`uid`).
 4. **Order Tracking:** The user opens "My Subscriptions". An active listener (`onSnapshot`) updates the client immediately whenever the `deliveryStatus` field changes in the database.
 5. **Administration:** The admin opens `/admin`. They can modify the `deliveryStatus` field within the Admin dashboard, writing directly to the Firebase database and instantly triggering the user's interface to transition from *Preparing* to *Out for Delivery*.
+=======
+# Annapurna
+A full-stack tiffin subscription and delivery management platform that allows customers to subscribe to meal plans, track deliveries in real time, manage subscriptions, and enables administrators to handle orders efficiently using React, TypeScript, Firebase, and Tailwind CSS.
+>>>>>>> 3491a8a6d65e171185ea705d9f08bc122794b246
