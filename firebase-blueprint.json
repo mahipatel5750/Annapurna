@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "Subscription": {
+      "title": "Subscription",
+      "description": "Represents a user's tiffin subscription order.",
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the subscriber."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "The contact phone number of the subscriber."
+        },
+        "address": {
+          "type": "string",
+          "description": "The delivery address."
+        },
+        "planName": {
+          "type": "string",
+          "description": "The name of the tiffin plan chosen."
+        },
+        "price": {
+          "type": "string",
+          "description": "The price of the plan."
+        },
+        "period": {
+          "type": "string",
+          "description": "The billing period of the plan."
+        },
+        "paymentMethod": {
+          "type": "string",
+          "enum": ["upi", "card", "cash"],
+          "description": "The payment method chosen by the subscriber."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "active", "cancelled"],
+          "description": "The current status of the subscription."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "datetime",
+          "description": "Timestamp when the subscription was submitted."
+        },
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who created the subscription (if authenticated)."
+        }
+      },
+      "required": ["fullName", "phoneNumber", "address", "planName", "price", "paymentMethod", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/subscriptions/{subscriptionId}": {
+      "schema": {
+        "$ref": "#/entities/Subscription"
+      },
+      "description": "A collection of all subscription orders placed by users."
+    }
+  }
+}
