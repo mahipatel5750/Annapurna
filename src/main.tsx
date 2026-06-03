@@ -11,14 +11,14 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/admin" element={<AdminPanel />} />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+  <BrowserRouter basename="/Annapurna">
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/admin" element={<AdminPanel />} />
+    </Routes>
+  </BrowserRouter>
+</AuthProvider>
   </StrictMode>,
 );
