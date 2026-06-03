@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Annapurna - Tiffin Delivery Service
 
 Annapurna is a modern web application designed for managing and tracking home-cooked meal (tiffin) subscriptions. It provides a seamless experience for both customers and administrators to handle daily food deliveries.
