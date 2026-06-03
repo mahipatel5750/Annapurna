@@ -98,10 +98,12 @@ This will compile the TypeScript definitions and bundle the application into sta
 3. **Purchasing & Firestore:** The user selects a tiffin plan, opening the checkout modal. Upon successful checkout, a new Document is created in the `subscriptions` Firestore collection natively mapping to the user's Unique ID (`uid`).
 4. **Order Tracking:** The user opens "My Subscriptions". An active listener (`onSnapshot`) updates the client immediately whenever the `deliveryStatus` field changes in the database.
 5. **Administration:** The admin opens `/admin`. They can modify the `deliveryStatus` field within the Admin dashboard, writing directly to the Firebase database and instantly triggering the user's interface to transition from *Preparing* to *Out for Delivery*.
-# Live Demo
 
+
+Live Demo
+```bash
 https://mahipatel5750.github.io/Annapurna/
-
+```
 #Author
 
 Mahi Patel
